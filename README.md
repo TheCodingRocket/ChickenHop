@@ -36,7 +36,7 @@ It can only be played on computer. Sorry about that, it's doesn't work on mobile
 🚀 Building your own Arcade Chicken
 </h1>
 
-1. Download or Fork the repository
+1. Download the repository
 
    ```sh
    Download, then extract the files in your computer
