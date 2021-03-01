@@ -7,9 +7,9 @@
    <a href="https://chickenhop.netlify.app" target="_blank">Arcade Chcicken</a>
 </h1>
 
-<h1 align="center">
-  This game is for educational purposes only, Please don't sue me. 
-</h1>
+<h3 align="center">
+  This game was for educational purposes only, Please don't sue me. 
+</h3>
 
 
 ---
