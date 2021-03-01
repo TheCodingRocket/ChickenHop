@@ -52,8 +52,13 @@ It can only be played on computer. Sorry about that, it's doesn't work on mobile
    ```sh
    Make an account at netlify.com and drag and drop your files there
    ```
-4. Preview and enjoty the game
+4. Preview and enjoy your game
 
    ```sh
    Once its finished uploading, upgrade or view your amazing game! Thats it! 
+   ```
+5. One more thing...
+
+   ```sh
+   It would be nice to link back this repository, so that other people could see it too! Thank you very much.
    ```
