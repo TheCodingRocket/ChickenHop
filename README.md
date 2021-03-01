@@ -26,7 +26,7 @@ You could also play it on Mobile!
 </h1>
  
  <h3 align="center">
-I made this game focusing on one goal. That the game can be enjoyed on all digital mediums! I tried my best, and now, you could play it on ypur phone, ipad, or possibly your TV!(Working on that). 
+I made this game while focusing on one goal. That the game can be enjoyed on all digital mediums! I tried my best, and now, you could play it on ypur phone, ipad, or possibly your TV!
  </h3>
  
  <h3 align="center"></h3>
