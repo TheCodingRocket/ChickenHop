@@ -1,0 +1,145 @@
+﻿/*(C) 2020 Moses Odhiambo*/
+@font-face{
+	font-family: Extrude;
+	src: url(assets/fonts/Extrude.ttf);
+}
+@font-face{
+	font-family: Boxy;
+	src: url(assets/fonts/PressStart2P.ttf);
+}
+*{
+	padding: 0;
+	margin: 0;
+	user-select:none;
+}
+*:focus {
+    outline: none;
+}
+body{
+	margin: 0;
+	overflow: hidden;
+}
+canvas{
+    height: 100%;
+    width: 100%;
+	display: block;
+}
+#score {
+	font-family: Boxy;
+	font-size: 18px;
+	color: white;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+#splash{
+	height: 100vh;
+	width: 100vw;
+	background-image: url('assets/images/splash-screen.jpg');
+	background-size: auto 100%;
+	background-position: center center;
+}
+#title{
+	position: absolute;
+	height: 18vh;
+	width: 100vw;
+	top: 8vh;
+	font-family: Extrude;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 6vh;
+}
+#loading{
+	opacity: 1;
+	position: relative;
+	top: 85vh;
+	width: 240px;
+	height: 5%;
+	margin: 0 auto;
+	font-family: Boxy;
+	font-size: 24px;
+	background-color: white;
+}
+.letter{
+	height: 80%;
+	float: left;
+	color: #11bfe2;
+}
+.main{
+	height: 80%;
+	margin: 5px 0px;
+}
+.period1{
+	animation: first 3s step-end infinite;
+}
+.period2{
+	animation: second 3s step-end infinite;
+}
+.period3{
+	animation: third 3s step-end infinite;
+}
+#instructions{
+	position: absolute;
+	top: 75vh;
+	width: 100%;
+	height: 5%;
+	margin: 0 auto;
+	font-family: 'Roboto';
+	font-size: 18px;
+	text-align: center;
+	color: white;
+}
+#play{
+	opacity: 0;
+	position: relative;
+	top: 80vh;
+	width: 200px;
+	height: 5%;
+	margin: 0 auto;
+	font-family: 'Press Start 2p';
+	font-size: 24px;
+	text-align: center;
+	color: #11bfe2;
+	background-color: white;
+}
+#pressPlay{
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	height: 100%;
+}
+#restart {
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	background-color: red;
+	color: white;
+	padding: 15px 30px 15px 30px;
+	font-family: Boxy;
+	font-size: 20px;
+	border-style: none;
+	transform: translate(-50%, -50%);
+	visibility: hidden;
+}
+@keyframes first{
+	0% { opacity: 0; }
+	25% { opacity: 1; }
+	50% { opacity: 1; }
+	75% { opacity: 1; }
+}
+@keyframes second{
+	0% { opacity: 0; }
+	25% { opacity: 0; }
+	50% { opacity: 1; }
+	75% { opacity: 1; }
+}
+@keyframes third{
+	0% { opacity: 0; }
+	25% { opacity: 0; }
+	50% { opacity: 0; }
+	75% { opacity: 1; }
+}
