@@ -7,20 +7,26 @@
    <a href="https://chickenhop.netlify.app" target="_blank">Arcade Chcicken</a>
 </h1>
 
+<h1 align="center">
+  This game is for educational purposes only, Please don't sue me. 
+</h1>
+
+
+---
 <h3 align="center">
-  Frogger (フロッガー, Furoggā) is a 1981 arcade game developed by Konami and originally published by Sega.[2] In North America, it was published jointly by Sega and Gremlin Industries. The object of the game is to direct frogs to their homes one by one by crossing a busy road and navigating a river full of hazards.
+The objective of Crossy Road is to cross an endless highway or series of roads and avoid obstacles as far as possible without dying. The player plays as a chosen character and must tap to go forward or swipe the screen in the appropriate direction to move the character horizontally.
   </h3>
   
   <h3 align="center">
-  I tried to make my own version, but I failed. Big time. And not to mention that this game is incredibly frustrating. But whats a game if it's not challenging right? I hope you can find the game useful. If you found any bugs, create an issue and hopefully I'll respond. Anyway enjoy, and have fun playing!
+I added a little twist to my version. It's crossy road, but slower. And reduxed! Making the game more challenging then ever before. But i didn't have anytime to add a scoreboard, sorry about that! And there's no other characters. I hope this game could be useful to you. Well that's it for me. Thank you for reading!
 
 ---
 <h1 align="center">
-How to play the game
+You could also play it on Mobile!
 </h1>
  
  <h3 align="center">
-It can only be played on computer. Sorry about that, it's doesn't work on mobile yet. Use your arrow keys to move, and your mission is to get the frog into the lilypads in ONE piece. You have 3 lives, use it well.
+I made this game focusing on one goal. That the game can be enjoyed on all digital mediums! I tried my best, and now, you could play it on ypur phone, ipad, or possibly your TV!(Working on that). 
  </h3>
  
  <h3 align="center"></h3>
