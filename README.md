@@ -18,7 +18,7 @@ The objective of Crossy Road is to cross an endless highway or series of roads a
   </h3>
   
   <h3 align="center">
-I added a little twist to my version. It's crossy road, but slower. And reduxed! Making the game more challenging then ever before. But i didn't have anytime to add a scoreboard, sorry about that! And there's no other characters. I hope this game could be useful to you. Well that's it for me. Thank you for reading!
+I added a little twist to my version. It's crossy road, but slower. And reduxed! Making the game more challenging than ever before. Cross as many roads as you can. Don't forget to have fun.
 
 ---
 <h1 align="center">
@@ -26,7 +26,7 @@ You could also play it on Mobile!
 </h1>
  
  <h3 align="center">
-I made this game while focusing on one goal. That the game can be enjoyed on all digital mediums! I tried my best, and now, you could play it on your phone, ipad, or possibly your TV!
+I am proud ti say that Arcade Chicken can be enjoyed on all digital mediums! You could play it on your phone, ipad, or possibly your TV!
  </h3>
  
  <h3 align="center"></h3>
