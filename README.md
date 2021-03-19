@@ -26,7 +26,7 @@ You could also play it on Mobile!
 </h1>
  
  <h3 align="center">
-I am proud ti say that Arcade Chicken can be enjoyed on all digital mediums! You could play it on your phone, ipad, or possibly your TV!
+I am proud to say that Arcade Chicken can be enjoyed on all digital mediums! You could play it on your phone, ipad, or possibly your TV!
  </h3>
  
  <h3 align="center"></h3>
