@@ -8,7 +8,7 @@
 </h1>
 
 <h3 align="center">
-  This game was only made for educational purposes, Please don't sue me 😉
+  This game was made for educational purposes only, Please don't sue me 😉
 </h3>
 
 
