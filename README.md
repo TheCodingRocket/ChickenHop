@@ -14,7 +14,7 @@
 
 ---
 <h3 align="center">
-The objective of Crossy Road is to cross an endless highway or series of roads and avoid obstacles as far as possible without dying. The player plays as a chosen character and must tap to go forward or swipe the screen in the appropriate direction to move the character horizontally.
+The objective of Crossy Road is to cross an endless highway or series of roads and avoid obstacles as far as possible without dying. The player plays as a chosen character and must tap to go forward or swipe the screen in the appropriate direction to move the character horizontally. My personal high score is 66, think you can beat it?
   </h3>
   
   <h3 align="center">
