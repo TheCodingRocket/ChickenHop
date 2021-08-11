@@ -4,7 +4,7 @@
 
 
 <h1 align="center">
-   <a href="https://chickenhop.netlify.app" target="_blank">Arcade Chicken</a>
+   <a href="https://chickenhop.netlify.app" target="_blank">ChickenHop</a>
 </h1>
 
 <h3 align="center">
