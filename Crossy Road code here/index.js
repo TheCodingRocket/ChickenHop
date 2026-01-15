@@ -184,7 +184,7 @@ class Chicken{
 
     jump(direction){
         if (!this.isMoving && !gameOver){
-            let duration = 0.4;
+            let duration = 0.2;
             let dX = 0, dY = 1, dZ = 0;
             let currentX = -columns/2 * cellWidth + cellWidth/2 + this.currentColumn * cellWidth;
             let currentZ = -this.currentLane * cellWidth;
