@@ -143,3 +143,82 @@ canvas{
 	50% { opacity: 0; }
 	75% { opacity: 1; }
 }
+
+/* Pause Button */
+#pauseButton {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	padding: 10px 20px;
+	background-color: #11bfe2;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-family: Boxy;
+	font-size: 16px;
+	cursor: pointer;
+	z-index: 100;
+	transition: background-color 0.3s ease;
+}
+
+#pauseButton:hover {
+	background-color: #0fa5c8;
+}
+
+/* Pause Menu Overlay */
+#pauseMenu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 200;
+}
+
+#pauseMenuContent {
+	background-color: #1a1a1a;
+	padding: 40px;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+	border: 4px solid #11bfe2;
+}
+
+#pauseMenuContent h1 {
+	font-family: Boxy;
+	font-size: 48px;
+	color: #11bfe2;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+
+#currentScore, #highScore {
+	font-family: Boxy;
+	font-size: 24px;
+	color: white;
+	margin: 15px 0;
+}
+
+#pauseMenuContent button {
+	display: block;
+	width: 100%;
+	padding: 15px 20px;
+	margin-top: 20px;
+	background-color: #11bfe2;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-family: Boxy;
+	font-size: 20px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	text-transform: uppercase;
+}
+
+#pauseMenuContent button:hover {
+	background-color: #0fa5c8;
+}
