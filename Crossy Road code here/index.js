@@ -11,6 +11,8 @@ let chicken;
 let lanes;
 let gameSounds, themeSong;
 let gameOver;
+let gamePaused = false;
+let highScore = localStorage.getItem('chickenHopHighScore') || 0;
 
 const firstRun = () =>{
     document.getElementById("instructions").innerText = ((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ? "Swipe in the direction you wanna move." : "Use the arrow keys to move around.") + "\nCross as many roads as possible";
@@ -42,9 +44,45 @@ const firstRun = () =>{
     
 }
 
+const pauseGame = () => {
+    if (gameOver || gamePaused) return;
+    
+    gamePaused = true;
+    document.getElementById("pauseButton").style.display = "none";
+    
+    const currentScore = chicken ? chicken.maxLane : 0;
+    document.getElementById("currentScore").innerText = "Current Score: " + currentScore;
+    document.getElementById("highScore").innerText = "High Score: " + highScore;
+    document.getElementById("pauseMenu").style.display = "flex";
+}
+
+const resumeGame = () => {
+    gamePaused = false;
+    document.getElementById("pauseMenu").style.display = "none";
+    document.getElementById("pauseButton").style.display = "block";
+}
+
+const goHome = () => {
+    gamePaused = false;
+    document.getElementById("pauseMenu").style.display = "none";
+    document.getElementById("pauseButton").style.display = "none";
+    document.getElementById("restart").style.visibility = "visible";
+    location.reload();
+}
+
+const updateHighScore = () => {
+    if (chicken && chicken.maxLane > highScore) {
+        highScore = chicken.maxLane;
+        localStorage.setItem('chickenHopHighScore', highScore);
+    }
+}
+
 const init = () =>{
     document.getElementById("score").innerText = "SCORE:0";
     document.getElementById("restart").style.visibility = "hidden";
+    document.getElementById("pauseButton").style.display = "block";
+    document.getElementById("pauseMenu").style.display = "none";
+    gamePaused = false;
     if(document.getElementById('splash'))
         document.body.removeChild(document.getElementById('splash'));
     
@@ -183,8 +221,8 @@ class Chicken{
     }
 
     jump(direction){
-        if (!this.isMoving && !gameOver){
-            let duration = 0.4;
+        if (!this.isMoving && !gameOver && !gamePaused){
+            let duration = 0.2;
             let dX = 0, dY = 1, dZ = 0;
             let currentX = -columns/2 * cellWidth + cellWidth/2 + this.currentColumn * cellWidth;
             let currentZ = -this.currentLane * cellWidth;
@@ -1106,10 +1144,12 @@ const update = () =>{
                 const leftPos = -columns/2 * cellWidth + cellWidth/2 - 2 * cellWidth;
                 const rightPos = -leftPos;
                 lane.vehicles.forEach(car => {
-                    if(lane.direction) {
-                        car.position.x = car.position.x > rightPos? leftPos : car.position.x + lane.speed * deltaTime;
-                    }else{
-                        car.position.x = car.position.x < leftPos? rightPos : car.position.x - lane.speed * deltaTime;
+                    if(!gamePaused) {
+                        if(lane.direction) {
+                            car.position.x = car.position.x > rightPos? leftPos : car.position.x + lane.speed * deltaTime;
+                        }else{
+                            car.position.x = car.position.x < leftPos? rightPos : car.position.x - lane.speed * deltaTime;
+                        }
                     }
                     const carLeftEdge = car.position.x + (lane.direction? (-cellWidth * 1.5) : (-cellWidth * 0.5));
                     const carRightEdge = car.position.x + (lane.direction? (cellWidth * 0.5) : (cellWidth * 1.5));
@@ -1121,6 +1161,8 @@ const update = () =>{
                             gameSounds.themeSong.setVolume(0);
                             gameSounds.hit.play();
                             gameOver = true;
+                            document.getElementById("pauseButton").style.display = "none";
+                            updateHighScore();
                             setTimeout(() => {
                                 document.getElementById("restart").style.visibility = "visible";
                                 // if (confirm("Game Over.\nRestart?"))
@@ -1134,10 +1176,12 @@ const update = () =>{
                 const leftPos = -columns/2 * cellWidth + cellWidth/2 - 3 * cellWidth;
                 const rightPos = -leftPos;
                 lane.vehicles.forEach(truck => {
-                    if(lane.direction) {
-                        truck.position.x = truck.position.x > rightPos? leftPos : truck.position.x + lane.speed * deltaTime;
-                    }else{
-                        truck.position.x = truck.position.x < leftPos? rightPos : truck.position.x - lane.speed * deltaTime;
+                    if(!gamePaused) {
+                        if(lane.direction) {
+                            truck.position.x = truck.position.x > rightPos? leftPos : truck.position.x + lane.speed * deltaTime;
+                        }else{
+                            truck.position.x = truck.position.x < leftPos? rightPos : truck.position.x - lane.speed * deltaTime;
+                        }
                     }
                     const truckLeftEdge = truck.position.x + (lane.direction? (-cellWidth * 2.5) : (-cellWidth * 0.5));
                     const truckRightEdge = truck.position.x + (lane.direction? (cellWidth * 0.5) : (cellWidth * 2.5));
@@ -1149,6 +1193,8 @@ const update = () =>{
                             gameSounds.themeSong.setVolume(0);
                             gameSounds.hit.play();
                             gameOver = true;
+                            document.getElementById("pauseButton").style.display = "none";
+                            updateHighScore();
                             setTimeout(() => {
                                 document.getElementById("restart").style.visibility = "visible";
                                 // if (confirm("Game Over.\nRestart?"))
@@ -1163,10 +1209,12 @@ const update = () =>{
                 const rightPos = -leftPos;
                 let logsBelowChicken = 0;
                 lane.logs.forEach(log => {
-                    if(lane.direction) {
-                        log.position.x = log.position.x > rightPos? leftPos : log.position.x + lane.speed * deltaTime;
-                    }else{
-                        log.position.x = log.position.x < leftPos? rightPos : log.position.x - lane.speed * deltaTime;
+                    if(!gamePaused) {
+                        if(lane.direction) {
+                            log.position.x = log.position.x > rightPos? leftPos : log.position.x + lane.speed * deltaTime;
+                        }else{
+                            log.position.x = log.position.x < leftPos? rightPos : log.position.x - lane.speed * deltaTime;
+                        }
                     }
                     const logLeftEdge = log.position.x + (lane.direction? (-cellWidth * 1.5) : (-cellWidth * 0.5));
                     const logRightEdge = log.position.x + (lane.direction? (cellWidth * 0.5) : (cellWidth * 1.5));
@@ -1189,6 +1237,8 @@ const update = () =>{
                     if (!gameOver){
                         chicken.fall();
                         gameOver = true;
+                        document.getElementById("pauseButton").style.display = "none";
+                        updateHighScore();
                         setTimeout(() => {
                             document.getElementById("restart").style.visibility = "visible";
                             // if (confirm("Game Over.\nRestart?"))
@@ -1198,10 +1248,12 @@ const update = () =>{
                 }
             }
             else if (lane.type == 'rail'){
-                if(lane.direction){
-                    lane.train.position.x = ((lane.train.position.x > lane.finalPosition)? lane.initialPosition : (lane.train.position.x + lane.speed * deltaTime));
-                } else{
-                    lane.train.position.x = ((lane.train.position.x < lane.finalPosition)? lane.initialPosition : (lane.train.position.x - lane.speed * deltaTime));
+                if(!gamePaused) {
+                    if(lane.direction){
+                        lane.train.position.x = ((lane.train.position.x > lane.finalPosition)? lane.initialPosition : (lane.train.position.x + lane.speed * deltaTime));
+                    } else{
+                        lane.train.position.x = ((lane.train.position.x < lane.finalPosition)? lane.initialPosition : (lane.train.position.x - lane.speed * deltaTime));
+                    }
                 }
                 const trainLength = 4 * cellWidth * lane.trainLength;
                 const trainLeftEdge = lane.train.position.x + (lane.direction? -(trainLength - cellWidth * 0.5) : -(cellWidth * 0.5));
@@ -1216,6 +1268,8 @@ const update = () =>{
                         gameSounds.shred.play();
                         gameSounds.death2.play();
                         gameOver = true;
+                        document.getElementById("pauseButton").style.display = "none";
+                        updateHighScore();
                         setTimeout(() => {
                             document.getElementById("restart").style.visibility = "visible";
                             // if (confirm("Game Over.\nRestart?"))
