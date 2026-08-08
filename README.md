@@ -11,6 +11,10 @@
   This game was made for educational purposes only, Please don't sue me 😉
 </h3>
 
+<h3 align="center">
+  Pay a visit to the original creator of this game! 
+</h3>
+
 
 ---
 <h3 align="center">
