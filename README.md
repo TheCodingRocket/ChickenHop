@@ -36,7 +36,7 @@ I am proud to say that Arcade Chicken can be enjoyed on all digital mediums! You
  <h3 align="center"></h3>
 
 
- [![Matrix SVG](https://raw.githubusercontent.com/rodrigograca31/rodrigograca31/master/matrix.svg)]([https://www.youtube.com/watch?v=SDkAGkd4NLc&t=27s](https://youtu.be/dQw4w9WgXcQ?si=5s14yHIgfEgk1dCq)) 
+ [![Matrix SVG](https://raw.githubusercontent.com/rodrigograca31/rodrigograca31/master/matrix.svg)]([https://youtu.be/dQw4w9WgXcQ?si=5s14yHIgfEgk1dCq]) 
 
 
 
